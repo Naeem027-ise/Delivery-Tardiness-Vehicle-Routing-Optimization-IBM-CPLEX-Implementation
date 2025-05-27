@@ -6,6 +6,9 @@ Create and test an optimization model that produces the lowest‐cost, on-time d
 ### Solution Approach
 
 MILP formulation – Defined decision variables, cost objective, and 10 constraints (flow balance, capacity, sequencing, tardiness) to capture the integrated routing-and-scheduling problem.
+
 CPLEX implementation – Coded the model in an OPL .mod/.dat pair and solved six progressively harder datasets (2–14 customers, 2–4 vehicles, varied capacities & due dates).
+
 Scenario analysis – Systematically tweaked due dates, penalty weights, vehicle capacity, and matrix size to quantify their impact on total cost (objective values rose from 156 → 2 188 across runs).
+
 Runtime management – Introduced a time-limit flag for the largest 15 × 15 instance, obtaining a near-optimal heuristic in 300 s when exact search proved prohibitive.
